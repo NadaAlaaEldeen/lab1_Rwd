@@ -1,0 +1,52 @@
+section {
+  height: 100vh;
+  display: grid;
+  grid-template-areas:
+    "head head head head"
+    "nav article article bar"
+    "nav article article bar"
+    "footer footer footer footer";
+  column-gap: 5px;
+  row-gap: 5px;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 768px) {
+  section {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+}
+header {
+  background-color: #5070b5;
+  color: white;
+  grid-area: head;
+}
+.side-nav {
+  background-color: #b95f21;
+  color: white;
+  text-align: center;
+  grid-area: nav;
+}
+.side-bar {
+  background-color: #b95f21;
+  color: white;
+  text-align: center;
+  grid-area: bar;
+}
+article {
+  background-color: #81a43c;
+  color: white;
+  text-align: center;
+  grid-area: article;
+}
+footer {
+  background-color: #5070b5;
+  color: white;
+  text-align: center;
+  grid-area: footer;
+}
